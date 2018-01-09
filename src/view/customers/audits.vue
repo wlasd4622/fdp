@@ -6,6 +6,7 @@
     </div>
 </template>
 <script>
+import pageBar from "../../components/pageBarComponent";
 export default {
   data() {
     return {
@@ -15,13 +16,17 @@ export default {
           url: ""
         },
         {
-          title: "退订审核",
+          title: "实名认证",
           url: ""
         }
       ]
     };
   },
-  components: {},
+  components: {
+ 
+    pageBar
+  },
+ 
   mounted() {},
   methods: {}
 };

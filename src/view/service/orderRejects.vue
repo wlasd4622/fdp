@@ -6,6 +6,7 @@
     </div>
 </template>
 <script>
+import pageBar from "../../components/pageBarComponent";
 export default {
   data() {
     return {
@@ -21,7 +22,11 @@ export default {
       ]
     };
   },
-  components: {},
+  components: {
+ 
+    pageBar
+  },
+ 
   mounted() {},
   methods: {}
 };
