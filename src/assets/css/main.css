@@ -7,8 +7,10 @@
 /* @import url("../global/plugins/morris/morris.css"); */
 /* @import url("../global/plugins/fullcalendar/fullcalendar.min.css"); */
 /* @import url("../global/plugins/jqvmap/jqvmap/jqvmap.css"); */
-/* @import url("../global/css/components.min.css"); */
+@import url("../global/css/components.min.css");
 /* @import url("../global/css/plugins.min.css"); */
 @import url("../layouts/layout/css/layout.min.css");
 @import url("../layouts/layout/css/themes/darkblue.min.css");
+
+/* @import url("../global/plugins/bootstrap-datepicker/css/bootstrap-datepicker.css") */
 /* @import url("../layouts/layout/css/custom.min.css"); */

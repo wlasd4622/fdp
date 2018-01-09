@@ -37,7 +37,6 @@
   /* OLD - iOS 6-, Safari 3.1-6 */
   -moz-box-flex: 1;
   /* OLD - Firefox 19- */
-  width: 0;
   /* For old syntax, otherwise collapses. */
   -webkit-flex: 1;
   /* Chrome */
@@ -52,7 +51,6 @@
   /* OLD - iOS 6-, Safari 3.1-6 */
   -moz-box-flex: 1;
   /* OLD - Firefox 19- */
-  width: 0;
   /* For old syntax, otherwise collapses. */
   -webkit-flex: 1;
   /* Chrome */
@@ -487,15 +485,22 @@ a:visited {
   }
   .page-content-white .page-bar+div {
     padding: 20px;
-    @include flex1;
+    
     width: 100%;
   }
   .table-scrollable {
     margin: 0 !important;
   }
   .table-container {
+    
+    @include flex1;
     @include flex-v;
     padding: 10px 20px;
+    padding-top: 0;
+    width:100%;
+  }
+  .table-container>.el-table{
+    @include flex1;
   }
   .table.table-scrollable {
     @include flex1;
@@ -504,9 +509,9 @@ a:visited {
   }
   .table-bar {
     overflow: hidden;
-   line-height: 34px;
-   min-height: 34px;
-   margin-top: 20px;
+    line-height: 34px;
+    min-height: 34px;
+    margin-top: 10px;
     height: 34px;
   }
   .table-bar select {
@@ -525,6 +530,7 @@ a:visited {
   }
   .form-horizontal label[class^=col-md] {
     padding-right: 5px;
+    padding-left: 5px;
     display: inline-block;
     line-height: 34px;
     height: 34px;
@@ -536,4 +542,17 @@ a:visited {
     display: inline-block;
     vertical-align: middle;
   }
+  .table-container .btn {
+    padding: 4px 11px;
+    font-size: 12px;
+  }
+  .table-container td.custom-column {
+    padding: 4px 8px !important;
+  }
+
+  .el-table__body-wrapper{
+    overflow: hidden !important;
+  }
 }
+
+

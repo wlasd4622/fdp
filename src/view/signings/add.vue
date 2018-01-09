@@ -18,194 +18,92 @@
           </div>
         </div>
         <div class="portlet-body form">
-          <form class="form-horizontal" role="form">
+          <form action="#" id="form_sample_1" class="form-horizontal" novalidate="novalidate">
             <div class="form-body">
+              <div class="alert alert-danger display-hide">
+                <button class="close" data-close="alert"></button> You have some form errors. Please check below. </div>
+              <div class="alert alert-success display-hide">
+                <button class="close" data-close="alert"></button> Your form validation is successful! </div>
               <div class="form-group">
-                <label class="col-md-3 control-label">Block Help</label>
-                <div class="col-md-9">
-                  <input type="text" class="form-control" placeholder="Enter text">
-                  <span class="help-block"> A block of help text. </span>
+                <label class="control-label col-md-3">Name
+                  <span class="required" aria-required="true"> * </span>
+                </label>
+                <div class="col-md-4">
+                  <input type="text" name="name" data-required="1" class="form-control"> </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-md-3">Email
+                  <span class="required" aria-required="true"> * </span>
+                </label>
+                <div class="col-md-4">
+                  <input name="email" type="text" class="form-control"> </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-md-3">URL
+                  <span class="required" aria-required="true"> * </span>
+                </label>
+                <div class="col-md-4">
+                  <input name="url" type="text" class="form-control">
+                  <span class="help-block"> e.g: http://www.demo.com or http://demo.com </span>
                 </div>
               </div>
               <div class="form-group">
-                <label class="col-md-3 control-label">Inline Help</label>
-                <div class="col-md-9">
-                  <input type="text" class="form-control input-inline input-medium" placeholder="Enter text">
-                  <span class="help-inline"> Inline help. </span>
+                <label class="control-label col-md-3">Number
+                  <span class="required" aria-required="true"> * </span>
+                </label>
+                <div class="col-md-4">
+                  <input name="number" type="text" class="form-control"> </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-md-3">Digits
+                  <span class="required" aria-required="true"> * </span>
+                </label>
+                <div class="col-md-4">
+                  <input name="digits" type="text" class="form-control"> </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-md-3">Credit Card
+                  <span class="required" aria-required="true"> * </span>
+                </label>
+                <div class="col-md-4">
+                  <input name="creditcard" type="text" class="form-control">
+                  <span class="help-block"> e.g: 5500 0000 0000 0004 </span>
                 </div>
               </div>
               <div class="form-group">
-                <label class="col-md-3 control-label">Input Group</label>
-                <div class="col-md-9">
-                  <div class="input-inline input-medium">
-                    <div class="input-group">
-                      <span class="input-group-addon">
-                                                                <i class="fa fa-user"></i>
-                                                            </span>
-                      <input type="email" class="form-control" placeholder="Email Address"> </div>
-                  </div>
-                  <span class="help-inline"> Inline help. </span>
+                <label class="control-label col-md-3">Occupation&nbsp;&nbsp;</label>
+                <div class="col-md-4">
+                  <input name="occupation" type="text" class="form-control">
+                  <span class="help-block"> optional field </span>
                 </div>
               </div>
               <div class="form-group">
-                <label class="col-md-3 control-label">Email Address</label>
-                <div class="col-md-9">
-                  <div class="input-group">
-                    <span class="input-group-addon">
-                                                            <i class="fa fa-envelope"></i>
-                                                        </span>
-                    <input type="email" class="form-control" placeholder="Email Address"> </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="col-md-3 control-label">Password</label>
-                <div class="col-md-9">
-                  <div class="input-group">
-                    <input type="password" class="form-control" placeholder="Password">
-                    <span class="input-group-addon">
-                                                            <i class="fa fa-user"></i>
-                                                        </span>
-                  </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="col-md-3 control-label">Left Icon</label>
-                <div class="col-md-9">
-                  <div class="input-icon">
-                    <i class="fa fa-bell-o"></i>
-                    <input type="text" class="form-control" placeholder="Left icon"> </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="col-md-3 control-label">Right Icon</label>
-                <div class="col-md-9">
-                  <div class="input-icon right">
-                    <i class="fa fa-microphone"></i>
-                    <input type="text" class="form-control" placeholder="Right icon"> </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="col-md-3 control-label">Icon Input in Group Input</label>
-                <div class="col-md-9">
-                  <div class="input-group">
-                    <div class="input-icon">
-                      <i class="fa fa-lock fa-fw"></i>
-                      <input id="newpassword" class="form-control" type="text" name="password" placeholder="password"> </div>
-                    <span class="input-group-btn">
-                                                            <button id="genpassword" class="btn btn-success" type="button">
-                                                                <i class="fa fa-arrow-left fa-fw"></i> Random</button>
-                                                        </span>
-                  </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="col-md-3 control-label">Input With Spinner</label>
-                <div class="col-md-9">
-                  <input type="password" class="form-control spinner" placeholder="Password"> </div>
-              </div>
-              <div class="form-group">
-                <label class="col-md-3 control-label">Static Control</label>
-                <div class="col-md-9">
-                  <p class="form-control-static"> email@example.com </p>
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="col-md-3 control-label">Disabled</label>
-                <div class="col-md-9">
-                  <input type="password" class="form-control" placeholder="Disabled" disabled=""> </div>
-              </div>
-              <div class="form-group">
-                <label class="col-md-3 control-label">Readonly</label>
-                <div class="col-md-9">
-                  <input type="password" class="form-control" placeholder="Readonly" readonly=""> </div>
-              </div>
-              <div class="form-group">
-                <label class="col-md-3 control-label">Dropdown</label>
-                <div class="col-md-9">
-                  <select class="form-control">
-                    <option>Option 1</option>
-                    <option>Option 2</option>
-                    <option>Option 3</option>
-                    <option>Option 4</option>
-                    <option>Option 5</option>
+                <label class="control-label col-md-3">Select
+                  <span class="required" aria-required="true"> * </span>
+                </label>
+                <div class="col-md-4">
+                  <select class="form-control" name="select">
+                    <option value="">Select...</option>
+                    <option value="Category 1">Category 1</option>
+                    <option value="Category 2">Category 2</option>
+                    <option value="Category 3">Category 5</option>
+                    <option value="Category 4">Category 4</option>
                   </select>
                 </div>
               </div>
               <div class="form-group">
-                <label class="col-md-3 control-label">Multiple Select</label>
-                <div class="col-md-9">
-                  <select multiple="" class="form-control">
-                    <option>Option 1</option>
-                    <option>Option 2</option>
-                    <option>Option 3</option>
-                    <option>Option 4</option>
-                    <option>Option 5</option>
+                <label class="control-label col-md-3">Multi Select
+                  <span class="required" aria-required="true"> * </span>
+                </label>
+                <div class="col-md-4">
+                  <select class="form-control" name="select_multi" multiple="">
+                    <option value="Category 1">Category 1</option>
+                    <option value="Category 2">Category 2</option>
+                    <option value="Category 3">Category 3</option>
+                    <option value="Category 4">Category 4</option>
+                    <option value="Category 5">Category 5</option>
                   </select>
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="col-md-3 control-label">Textarea</label>
-                <div class="col-md-9">
-                  <textarea class="form-control" rows="3"></textarea>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="exampleInputFile" class="col-md-3 control-label">File input</label>
-                <div class="col-md-9">
-                  <input type="file" id="exampleInputFile">
-                  <p class="help-block"> some help text here. </p>
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="col-md-3 control-label">Checkboxes</label>
-                <div class="col-md-9">
-                  <div class="checkbox-list">
-                    <label>
-                      <div class="checker"><span><input type="checkbox"></span></div> Checkbox 1 </label>
-                    <label>
-                      <div class="checker"><span><input type="checkbox"></span></div> Checkbox 1 </label>
-                    <label>
-                      <div class="checker disabled"><span><input type="checkbox" disabled=""></span></div> Disabled </label>
-                  </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="col-md-3 control-label">Inline Checkboxes</label>
-                <div class="col-md-9">
-                  <div class="checkbox-list">
-                    <label class="checkbox-inline">
-                      <div class="checker" id="uniform-inlineCheckbox21"><span><input type="checkbox" id="inlineCheckbox21" value="option1"></span></div> Checkbox 1 </label>
-                    <label class="checkbox-inline">
-                      <div class="checker" id="uniform-inlineCheckbox22"><span><input type="checkbox" id="inlineCheckbox22" value="option2"></span></div> Checkbox 2 </label>
-                    <label class="checkbox-inline">
-                      <div class="checker disabled" id="uniform-inlineCheckbox23"><span><input type="checkbox" id="inlineCheckbox23" value="option3" disabled=""></span></div> Disabled </label>
-                  </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="col-md-3 control-label">Radio</label>
-                <div class="col-md-9">
-                  <div class="radio-list">
-                    <label>
-                      <div class="radio" id="uniform-optionsRadios22"><span><input type="radio" name="optionsRadios" id="optionsRadios22" value="option1" checked=""></span></div> Option 1 </label>
-                    <label>
-                      <div class="radio" id="uniform-optionsRadios23"><span><input type="radio" name="optionsRadios" id="optionsRadios23" value="option2" checked=""></span></div> Option 2 </label>
-                    <label>
-                      <div class="radio disabled" id="uniform-optionsRadios24"><span><input type="radio" name="optionsRadios" id="optionsRadios24" value="option2" disabled=""></span></div> Disabled </label>
-                  </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="col-md-3 control-label">Inline Radio</label>
-                <div class="col-md-9">
-                  <div class="radio-list">
-                    <label class="radio-inline">
-                      <div class="radio" id="uniform-optionsRadios25"><span><input type="radio" name="optionsRadios" id="optionsRadios25" value="option1" checked=""></span></div> Option 1 </label>
-                    <label class="radio-inline">
-                      <div class="radio" id="uniform-optionsRadios26"><span class="checked"><input type="radio" name="optionsRadios" id="optionsRadios26" value="option2" checked=""></span></div> Option 2 </label>
-                    <label class="radio-inline">
-                      <div class="radio disabled" id="uniform-optionsRadios27"><span><input type="radio" name="optionsRadios" id="optionsRadios27" value="option3" disabled=""></span></div> Disabled </label>
-                  </div>
+                  <span class="help-block"> select max 3 options, min 1 option </span>
                 </div>
               </div>
             </div>
@@ -213,7 +111,7 @@
               <div class="row">
                 <div class="col-md-offset-3 col-md-9">
                   <button type="submit" class="btn green">Submit</button>
-                  <button type="button" class="btn default">Cancel</button>
+                  <button type="button" class="btn grey-salsa btn-outline">Cancel</button>
                 </div>
               </div>
             </div>
@@ -225,20 +123,11 @@
 </template>
 <script>
 export default {
-    data() {
-        return {
-
-
-        };
-    },
-    components: {
-
-    },
-    mounted() {
-
-    },
-    methods: {
-
-    }
+  data() {
+    return {};
+  },
+  components: {},
+  mounted() {},
+  methods: {}
 };
 </script>

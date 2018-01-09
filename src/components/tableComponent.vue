@@ -327,4 +327,5 @@ select {
 select::-ms-expand {
   display: none;
 }
+
 </style>

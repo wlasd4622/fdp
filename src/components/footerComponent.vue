@@ -4,8 +4,8 @@
     </div>
 </template>
 <script>
-import "../assets/global/plugins/jquery.min";
-import "../assets/global/plugins/bootstrap/js/bootstrap.min";
+//import "../assets/global/plugins/jquery.min";
+//import "../assets/global/plugins/bootstrap/js/bootstrap.min";
 //import "../assets/global/plugins/js.cookie.min";
 //import "../assets/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min";
 //import "../assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min";
@@ -46,6 +46,10 @@ import "../assets/global/plugins/bootstrap/js/bootstrap.min";
 //import "../assets/layouts/layout/scripts/layout.min";
 //import "../assets/layouts/layout/scripts/demo.min";
 //import "../assets/layouts/global/scripts/quick-sidebar.min";
+
+// import "../assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker"
+// import "../assets/global/plugins/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min"
+// import "../assets/global/plugins/formvalidation/formValidation"
 export default {
   data() {
     return {};
