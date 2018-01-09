@@ -1,14 +1,14 @@
 @import url("../global/plugins/font-awesome/css/font-awesome.min.css");
-@import url("../global/plugins/simple-line-icons/simple-line-icons.min.css");
+/* @import url("../global/plugins/simple-line-icons/simple-line-icons.min.css"); */
 @import url("../global/plugins/bootstrap/css/bootstrap.min.css");
-@import url("../global/plugins/uniform/css/uniform.default.css");
-@import url("../global/plugins/bootstrap-switch/css/bootstrap-switch.min.css");
-@import url("../global/plugins/bootstrap-daterangepicker/daterangepicker.min.css");
-@import url("../global/plugins/morris/morris.css");
-@import url("../global/plugins/fullcalendar/fullcalendar.min.css");
-@import url("../global/plugins/jqvmap/jqvmap/jqvmap.css");
-@import url("../global/css/components.min.css");
-@import url("../global/css/plugins.min.css");
+/* @import url("../global/plugins/uniform/css/uniform.default.css"); */
+/* @import url("../global/plugins/bootstrap-switch/css/bootstrap-switch.min.css"); */
+/* @import url("../global/plugins/bootstrap-daterangepicker/daterangepicker.min.css"); */
+/* @import url("../global/plugins/morris/morris.css"); */
+/* @import url("../global/plugins/fullcalendar/fullcalendar.min.css"); */
+/* @import url("../global/plugins/jqvmap/jqvmap/jqvmap.css"); */
+/* @import url("../global/css/components.min.css"); */
+/* @import url("../global/css/plugins.min.css"); */
 @import url("../layouts/layout/css/layout.min.css");
 @import url("../layouts/layout/css/themes/darkblue.min.css");
-@import url("../layouts/layout/css/custom.min.css");
+/* @import url("../layouts/layout/css/custom.min.css"); */
