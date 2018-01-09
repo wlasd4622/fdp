@@ -2,6 +2,65 @@
   <div class="signings-container">
     <!--签约记录一览-->
     <page-bar :params="pageBar"></page-bar>
+    <div class="search-container form">
+      <form class="form-horizontal" role="form">
+        <div class="form-body">
+          <div class="form-group">
+            <div class="col-md-4">
+              <label class="col-md-3 control-label">
+                <div>省级组织机构</div>
+              </label>
+              <div class="col-md-9">
+                <input type="text" class="form-control" placeholder="">
+              </div>
+            </div>
+            <div class="col-md-4">
+              <label class="col-md-3 control-label">
+                <div>市级组织机构</div>
+              </label>
+              <div class="col-md-9">
+                <input type="text" class="form-control" placeholder="">
+              </div>
+            </div>
+            <div class="col-md-4">
+              <label class="col-md-3 control-label">
+                <div>区县组织机构</div>
+              </label>
+              <div class="col-md-9">
+                <input type="text" class="form-control" placeholder="">
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-md-4">
+              <label class="col-md-3 control-label">
+                <div>服务中心</div>
+              </label>
+              <div class="col-md-9">
+                <input type="text" class="form-control" placeholder="">
+              </div>
+            </div>
+            <div class="col-md-4">
+              <label class="col-md-3 control-label">
+                <div>审核状态</div>
+              </label>
+              <div class="col-md-9">
+                <input type="text" class="form-control" placeholder="">
+              </div>
+            </div>
+            <div class="col-md-4">
+              <label class="col-md-3 control-label">
+                <div> </div>
+              </label>
+              <div class="col-md-9 text-right">
+                <button type="button" class="btn btn-primary search-btn">查询</button>
+                <router-link :to="{ path: '/signings/add'}" class="btn btn-primary add-btn">新增</router-link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
     <tableComponent :params="tableParams" v-on:tableRander="tableRander"></tableComponent>
   </div>
 </template>
@@ -59,7 +118,7 @@ export default {
           },
           {
             name: "操作",
-            field: "memberNo",
+            field: "operation",
             custom: ["memberId", "blanceStr"]
           }
         ]
@@ -70,17 +129,29 @@ export default {
     tableComponent,
     pageBar
   },
+  mounted() {
+    $(".signings-container")
+      .on("click.table", ".examine", function() {
+        alert("审核");
+      })
+      .on("click.table", ".del", function() {
+        alert("删除");
+      });
+  },
   methods: {
-    aa() {
-      alert(1);
-    },
-    bbaa() {
-      alert(2);
-    },
     tableRander() {
       $(".custom-column").each(function(i, input) {
-        console.log(input);
+        //$(input).params('tr:eq(0)').find('[data-params]')
+        if ($(input).data("field") == "operation") {
+          $(input).find("div").append(`
+              <button type="button" class="custom-element btn btn-primary examine">审核</button>
+              <button type="button" class="custom-element btn btn-danger del">删除</button>
+              `);
+        }
       });
+    },
+    add() {
+      alert(1);
     }
   }
 };

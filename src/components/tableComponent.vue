@@ -16,12 +16,12 @@
                 </thead>
                 <tbody>
                     <tr v-for="data in dataList">
-                        <td v-for="item in params.columns" :data-type="item.type">
+                        <td v-for="item in params.columns" :data-field="item.field" :class="{'custom-column':item.custom}" :data-type="item.type">
                             <div v-if="item.type=='checkbox'">
                                 口
                             </div>
                             <div v-else-if="item.custom">
-                                <input type="hidden" class="custom-column" v-for="c in item.custom" :name="c" :value="data[c]">
+                                <input type="hidden" class="" :data-param="c" v-for="c in item.custom" :value="data[c]">
                             </div>
                             <div v-else>
                                 {{data[item.field]}}
@@ -162,6 +162,7 @@ export default {
         _this.totalPage = Math.ceil(_this.totalSize / _this.limit);
         _this.refreshPageCon();
         setTimeout(()=>{
+            $('.custom-element').remove();
             _this.$emit('tableRander');
         })
         return false;

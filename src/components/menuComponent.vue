@@ -41,25 +41,23 @@
           </a>
           <ul class="sub-menu">
             <li class="nav-item start active open">
-              <a href="index.html" class="nav-link ">
+              <router-link :to="{ path: '/signings'}" class="nav-link">
                 <i class="icon-bar-chart"></i>
                 <span class="title">签约审核</span>
                 <span class="selected"></span>
-              </a>
+              </router-link>
             </li>
             <li class="nav-item start ">
-              <a href="dashboard_2.html" class="nav-link ">
+              <router-link :to="{ path: '/orderRejects'}" class="nav-link">
                 <i class="icon-bulb"></i>
                 <span class="title">退订审核</span>
-
-              </a>
+              </router-link>
             </li>
             <li class="nav-item start ">
-              <a href="dashboard_3.html" class="nav-link ">
+              <router-link :to="{ path: '/audits'}" class="nav-link">
                 <i class="icon-graph"></i>
                 <span class="title">实名认证</span>
-
-              </a>
+              </router-link>
             </li>
           </ul>
         </li>
