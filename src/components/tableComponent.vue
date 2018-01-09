@@ -1,75 +1,75 @@
 <template>
-    <div class="table-container">
-        <div class="table table-scrollable">
-            <table v-if="dataList" class="table table-bordered table-hover">
-                <thead>
-                    <tr>
-                        <th v-for="item in params.columns" :data-type="item.type">
-                            <div v-if="item.type=='checkbox'">
-                                口
-                            </div>
-                            <div v-else>
-                                {{item.name}}
-                            </div>
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr v-for="data in dataList">
-                        <td v-for="item in params.columns" :data-field="item.field" :class="{'custom-column':item.custom}" :data-type="item.type">
-                            <div v-if="item.type=='checkbox'">
-                                口
-                            </div>
-                            <div v-else-if="item.custom">
-                                <input type="hidden" class="" :data-param="c" v-for="c in item.custom" :value="data[c]">
-                            </div>
-                            <div v-else>
-                                {{data[item.field]}}
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="table-bar">
-            <div class="page-size">
-                <div>
-                    <select v-on:change="menuChange()" v-model="limit">
-                        <option v-for="item in menu" v-bind:value="item">{{item}}</option>
-                    </select>
-                    记录/页，显示第 {{start}} 至 {{end}} 项记录，共 {{totalSize}} 项
-                </div>
-            </div>
-            <div class="page-con">
-                <ul>
-                    <li>
-                        <a v-on:click="firstClick()" v-bind:class="{ 'disabled': cur == 1}">首页</a>
-                    </li>
-                    <li>
-                        <a v-on:click="preClick()" v-bind:class="{ 'disabled': cur == 1}">上一页</a>
-                    </li>
-                    <li v-for="per in pages" v-bind:class="{ 'active': cur == per}">
-                        <a v-on:click="pageClick(per)">{{ per }}</a>
-                    </li>
-                    <li>
-                        <a v-on:click="nextClick()" v-bind:class="{ 'disabled': cur == totalPage}">下一页</a>
-                    </li>
-                    <li>
-                        <a v-on:click="lastClick()" v-bind:class="{ 'disabled': cur == totalPage}">尾页</a>
-                    </li>
-                    <li>
-                        <a>共
-                            <i>{{totalPage}}</i>页</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="clear-both"></div>
-        </div>
+  <div class="table-container">
+    <div class="table table-scrollable">
+      <table v-if="dataList" class="table table-bordered table-hover">
+        <thead>
+          <tr>
+            <th v-for="item in params.columns" :data-type="item.type">
+              <div v-if="item.type=='checkbox'">
+                口
+              </div>
+              <div v-else>
+                {{item.name}}
+              </div>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="data in dataList">
+            <td v-for="item in params.columns" :data-field="item.field" :class="{'custom-column':item.custom}" :data-type="item.type">
+              <div v-if="item.type=='checkbox'">
+                口
+              </div>
+              <div v-else-if="item.custom">
+                <input type="hidden" class="" :data-param="c" v-for="c in item.custom" :value="data[c]">
+              </div>
+              <div v-else>
+                {{data[item.field]}}
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
+    <div class="table-bar">
+      <div class="page-size">
+        <div>
+          <select v-on:change="menuChange()" v-model="limit">
+            <option v-for="item in menu" v-bind:value="item">{{item}}</option>
+          </select>
+          记录/页，显示第 {{start}} 至 {{end}} 项记录，共 {{totalSize}} 项
+        </div>
+      </div>
+      <div class="page-con">
+        <ul>
+          <li>
+            <a v-on:click="firstClick()" v-bind:class="{ 'disabled': cur == 1}">首页</a>
+          </li>
+          <li>
+            <a v-on:click="preClick()" v-bind:class="{ 'disabled': cur == 1}">上一页</a>
+          </li>
+          <li v-for="per in pages" v-bind:class="{ 'active': cur == per}">
+            <a v-on:click="pageClick(per)">{{ per }}</a>
+          </li>
+          <li>
+            <a v-on:click="nextClick()" v-bind:class="{ 'disabled': cur == totalPage}">下一页</a>
+          </li>
+          <li>
+            <a v-on:click="lastClick()" v-bind:class="{ 'disabled': cur == totalPage}">尾页</a>
+          </li>
+          <li>
+            <a>共
+              <i>{{totalPage}}</i>页</a>
+          </li>
+        </ul>
+      </div>
+      <div class="clear-both"></div>
+    </div>
+  </div>
 </template>
 <script>
+import axios from "axios";
 //测试数据
-let tableData = require("../data/member.json");
 export default {
   props: {
     params: {}
@@ -155,32 +155,30 @@ export default {
       this.param[this.pageParamName[0]] = this.cur;
       this.param[this.pageParamName[1]] = this.limit;
       if (!this.url) {
-        this.dataList = tableData.result.list;
-        // 返回总记录数
-        _this.totalSize = tableData.result.iTotalRecords * 10;
-
-        _this.totalPage = Math.ceil(_this.totalSize / _this.limit);
-        _this.refreshPageCon();
-        setTimeout(()=>{
-            $('.custom-element').remove();
-            _this.$emit('tableRander');
-        })
+        alert("请配置table url");
         return false;
       }
-      Ajax({
-        url: _this.url,
-        method: _this.method,
-        data: _this.param,
-        callback: function(res) {
-          // 返回结果数据集
-          this.dataList = res.data;
-          // 返回总记录数
-          _this.totalSize = 25;
-
-          _this.totalPage = Math.ceil(_this.totalSize / _this.limit);
-          _this.refreshPageCon();
-        }
-      });
+      axios
+        .get(this.url)
+        .then(res => {
+          if (res.status == 200) {
+            var result = res.data.result;
+            this.dataList = result.list;
+            // 返回总记录数
+            _this.totalSize = result.iTotalRecords * 10;
+            _this.totalPage = Math.ceil(_this.totalSize / _this.limit);
+            _this.refreshPageCon();
+            setTimeout(() => {
+              $(".custom-element").remove();
+              _this.$emit("tableRander");
+            });
+          } else {
+            console.warn(res.statusText);
+          }
+        })
+        .catch(error => {
+          console.warn(error);
+        });
     },
     // 每页显示记录数 下拉
     menuChange: function() {

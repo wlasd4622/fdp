@@ -67,7 +67,6 @@
 <script>
 import tableComponent from "../../components/tableComponent";
 import pageBar from "../../components/pageBarComponent";
-
 export default {
   data() {
     return {
@@ -82,7 +81,7 @@ export default {
         }
       ],
       tableParams: {
-        url: "",
+        url: "/api/memberList",
         columns: [
           {
             field: "memberId",
@@ -129,7 +128,7 @@ export default {
     tableComponent,
     pageBar
   },
-  mounted() {
+  created() {
     $(".signings-container")
       .on("click.table", ".examine", function() {
         alert("审核");
