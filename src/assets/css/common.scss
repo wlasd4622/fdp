@@ -1,3 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
 .cl:after {
   content: "\200B";
   display: block;
@@ -147,10 +158,10 @@
   -o-justify-content: center;
   justify-content: center;
   /* 其它取值如下：
-    align-items	 主轴原点方向对齐
-    flex-end		主轴延伸方向对齐
+    align-items  主轴原点方向对齐
+    flex-end    主轴延伸方向对齐
     space-between   等间距排列，首尾不留白
-    space-around	等间距排列，首尾留白
+    space-around  等间距排列，首尾留白
    */
 }
 
@@ -164,10 +175,10 @@
   -o-justify-content: center;
   justify-content: center;
   /* 其它取值如下：
-    align-items	 主轴原点方向对齐
-    flex-end		主轴延伸方向对齐
+    align-items  主轴原点方向对齐
+    flex-end    主轴延伸方向对齐
     space-between   等间距排列，首尾不留白
-    space-around	等间距排列，首尾留白
+    space-around  等间距排列，首尾留白
    */
 }
 
@@ -416,6 +427,10 @@
   height: 100%;
 }
 
+.line-height-1 {
+  line-height: 1;
+}
+
 .inline-block>* {
   display: inline-block !important;
 }
@@ -426,6 +441,30 @@
 
 .iconfont {
   -webkit-text-stroke-width: 0px !important;
+}
+
+.margin-bottom-0 {
+  margin-bottom: 0 !important;
+}
+
+.padding-bottom-0 {
+  padding-bottom: 0 !important;
+}
+
+.padding-bottom-10 {
+  padding-bottom: 10px !important;
+}
+
+.padding-bottom-20 {
+  padding-bottom: 20px !important;
+}
+
+.padding-top-10 {
+  padding-top: 10px !important;
+}
+
+.padding-top-20 {
+  padding-top: 20px !important;
 }
 
 .ml {
@@ -477,29 +516,24 @@ a:visited {
   .page-content>div {
     width: 100%;
     height: 100%;
-    @include flex-v;
-    width: 100%;
   }
   .page-content-white .page-bar {
     margin: 0;
   }
   .page-content-white .page-bar+div {
     padding: 20px;
-    
-    width: 100%;
   }
   .table-scrollable {
     margin: 0 !important;
   }
   .table-container {
-    
     @include flex1;
     @include flex-v;
-    padding: 10px 20px;
+    padding: 10px 0px;
     padding-top: 0;
-    width:100%;
+    width: 100%;
   }
-  .table-container>.el-table{
+  .table-container>.el-table {
     @include flex1;
   }
   .table.table-scrollable {
@@ -549,10 +583,58 @@ a:visited {
   .table-container td.custom-column {
     padding: 4px 8px !important;
   }
+  .el-table__body-wrapper {
+     overflow: hidden !important;
+  }
+  .search-container {
+    overflow: hidden;
+  } // -------------------------
+  .el-breadcrumb {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+  }
+  .search-container label.el-form-item__label {
+    width: 100px;
+  }
+  .search-container input.el-input__inner,
+  .search-container .el-input.el-input--suffix {
+    height: 40px;
+  }
+  .search-container .el-col.el-col-8 {
+    height: 62px;
+  }
+  .scroll-container {
+    overflow: hidden;
+  }
+  .el-checkbox+.el-checkbox {
+    margin-left: 0;
+  }
+  label.el-checkbox {
+    margin-right: 30px;
+    height: 20px !important;
+    line-height: 20px;
+    margin-left: 0 !important;
+  }
+  .el-checkbox-group {
+    line-height: 1.3;
+    padding-top: 11px;
+  }
+  .el-form-item__label {
+    line-height: 1;
+  }
+  .search-container .el-date-editor.el-range-editor.el-input__inner.el-date-editor--daterange,
+  .search-container input.el-input__inner {
+    width: 217px;
+  } // ---
+  table.el-table__body {
+    min-width: 100%;
+  }
 
-  .el-table__body-wrapper{
-    overflow: hidden !important;
+  .el-table--border .has-gutter th:nth-last-of-type(2){
+    // border-right: 1px solid #ebeef5 !important;
   }
 }
-
-

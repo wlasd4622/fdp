@@ -12,5 +12,8 @@ apiRoutes.get('/home', function(req, res) {
 apiRoutes.get('/memberList', function(req, res) {
 	res.json(memberList);
 });
- 
+
+apiRoutes.post('/signings/add', function(req, res) {
+	res.json(memberList);
+});
 module.exports = apiRoutes;

@@ -4,7 +4,8 @@
     </div>
 </template>
 <script>
-//import "../assets/global/plugins/jquery.min";
+import "../assets/global/plugins/jquery.min";
+import "../assets/global/plugins/nicescroll/jquery.nicescroll"
 //import "../assets/global/plugins/bootstrap/js/bootstrap.min";
 //import "../assets/global/plugins/js.cookie.min";
 //import "../assets/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min";

@@ -30,7 +30,6 @@
               </span>
             </div>
           </form>
-          <!-- END RESPONSIVE QUICK SEARCH FORM -->
         </li>
         <li class="nav-item start active open">
           <a href="javascript:;" class="nav-link nav-toggle">
@@ -61,12 +60,32 @@
             </li>
           </ul>
         </li>
-
+        <li class="nav-item start active open">
+          <a href="javascript:;" class="nav-link nav-toggle">
+            <i class="icon-home"></i>
+            <span class="title">基本配置</span>
+            <span class="selected"></span>
+            <span class="arrow open"></span>
+          </a>
+          <ul class="sub-menu">
+            <li class="nav-item start">
+              <router-link :to="{}" class="nav-link">
+                <i class="icon-bar-chart"></i>
+                <span class="title">地区配置</span>
+                <span class="selected"></span>
+              </router-link>
+            </li>
+            <li class="nav-item start ">
+              <router-link :to="{path:'/service-package/list'}" class="nav-link">
+                <i class="icon-bar-chart"></i>
+                <span class="title">服务包配置</span>
+                <span class="selected"></span>
+              </router-link>
+            </li>
+          </ul>
+        </li>
       </ul>
-      <!-- END SIDEBAR MENU -->
-      <!-- END SIDEBAR MENU -->
     </div>
-    <!-- END SIDEBAR -->
   </div>
 </template>
 <script>

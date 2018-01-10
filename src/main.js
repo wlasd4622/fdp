@@ -4,7 +4,7 @@ import router from './router'
 import '../src/assets/css/main.css'
 import '../src/assets/css/common.scss'
 import ElementUI from 'element-ui'
-import 'element-ui/lib/theme-default/index.css'
+import 'element-ui/lib/theme-chalk/index.css'
 Vue.config.productionTip = false
 window.GeminiScrollbar = require("gemini-scrollbar");
 import "gemini-scrollbar/gemini-scrollbar.css";
